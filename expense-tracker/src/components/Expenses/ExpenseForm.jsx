@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../../assets/css/ExpenseForm.css";
 
-const ExpenseForm = () => {
+const ExpenseForm = ({ onAddExpense }) => {
   const defaultExpense = {
     title: "",
     amount: "",
@@ -23,8 +23,9 @@ const ExpenseForm = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(expenseData);
-    setExpenseData(defaultExpense);
+    onAddExpense(expenseData);
+
+    // setExpenseData(defaultExpense);
   };
 
   return (

@@ -1,10 +1,11 @@
 import "../../assets/css/AddExpense.css";
 import ExpenseForm from "./ExpenseForm";
 
-const AddExpense = () => {
+const AddExpense = ({ onAddExpense }) => {
+  console.log(onAddExpense);
   return (
     <div className="new-expense">
-      <ExpenseForm />
+      <ExpenseForm onAddExpense={onAddExpense} />
     </div>
   );
 };
