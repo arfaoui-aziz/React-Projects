@@ -9,8 +9,16 @@ const ExpenseForm = () => {
   });
 
   const changeHandler = (e) => {
+
     const input = e.target;
-    setExpenseData({ ...expenseData, [input.name]: input.value });
+
+    setExpenseData((prevState) => {
+      return {
+        ...prevState,
+        [input.name]: input.value,
+      };
+    });
+    
   };
 
   return (
