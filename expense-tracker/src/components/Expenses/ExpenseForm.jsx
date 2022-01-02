@@ -5,7 +5,7 @@ const ExpenseForm = ({ onAddExpense }) => {
   const defaultExpense = {
     title: "",
     amount: "",
-    date: new Date().toISOString().split("T")[0],
+    date: "",
   };
 
   const [expenseData, setExpenseData] = useState(defaultExpense);
@@ -25,7 +25,7 @@ const ExpenseForm = ({ onAddExpense }) => {
     e.preventDefault();
     onAddExpense(expenseData);
 
-    // setExpenseData(defaultExpense);
+    setExpenseData(defaultExpense);
   };
 
   return (

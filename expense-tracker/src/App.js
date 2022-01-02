@@ -13,7 +13,7 @@ function App() {
         {
           id: `e${prevState.length + 1}`,
           ...newExpense,
-          date: new Date(),
+          date: new Date(newExpense.date),
         },
       ];
     });
