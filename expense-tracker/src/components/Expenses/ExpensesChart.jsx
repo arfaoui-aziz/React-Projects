@@ -20,7 +20,6 @@ const ExpensesChart = ({ expenses }) => {
   for (let expense of expenses) {
     // getMonth() starts at 0 => January = 0
     const expenseMonth = expense.date.getMonth();
-    console.log(expenseMonth);
     chartDataPoints[expenseMonth].value += expense.amount;
   }
 

@@ -7,8 +7,6 @@ const ChartBar = ({ value, label, maxValue }) => {
     barFillHeight = Math.round((value / maxValue) * 100) + "%";
   }
 
-  console.log(barFillHeight, value, maxValue, label);
-
   return (
     <div className="chart-bar">
       <div className="chart-bar__inner">
