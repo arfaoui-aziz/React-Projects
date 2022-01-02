@@ -13,12 +13,11 @@ function App() {
         {
           id: `e${prevState.length + 1}`,
           ...newExpense,
+          amount: +newExpense.amount,
           date: new Date(newExpense.date),
         },
       ];
     });
-
-    console.log(expenses);
   };
 
   return (

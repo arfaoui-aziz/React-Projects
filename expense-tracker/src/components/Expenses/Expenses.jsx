@@ -1,21 +1,18 @@
 import Card from "../Card";
-import ExpenseItem from "./ExpenseItem";
-import "../../assets/css/Expenses.css";
+
 import ExpensesChart from "./ExpensesChart";
+import ExpensesFilter from "./ExpensesFilter";
+import ExpensesList from "./ExpensesList";
+import "../../assets/css/Expenses.css";
 
 const Expenses = (props) => {
   return (
     <Card className="expenses">
+      <ExpensesFilter expenses={props.items} />
+
       <ExpensesChart expenses={props.items} />
 
-      {props.items.map((expense) => (
-        <ExpenseItem
-          key={expense.id}
-          title={expense.title}
-          amount={expense.amount}
-          date={expense.date}
-        />
-      ))}
+      <ExpensesList expenses={props.items} />
     </Card>
   );
 };
