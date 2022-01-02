@@ -4,6 +4,6 @@
 
 - [x] Expenses Chart
 - [x] Toggle Add Expense
-- [] Add Filter Expense
+- [x] Add Filter Expenses
 - [x] Refactor Expenses List
 - [x] Fix Added Amount

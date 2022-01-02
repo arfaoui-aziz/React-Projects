@@ -18,6 +18,18 @@ const expenses = [
     amount: 450,
     date: new Date(2021, 5, 12),
   },
+  {
+    id: "e5",
+    title: "Laptop",
+    amount: 1850,
+    date: new Date(2022, 0, 1),
+  },
+  {
+    id: "e6",
+    title: "React Course",
+    amount: 9.99,
+    date: new Date(2022, 0, 2),
+  },
 ];
 
 export default expenses;
