@@ -1,19 +1,47 @@
+import { useState } from "react";
+
 import Button from "../UI/Button";
 import Card from "../UI/Card";
 import styles from "./AddUser.module.css";
 
 const AddUser = () => {
+  const initialUserData = { username: "", age: "" };
+  const [userData, setUserData] = useState(initialUserData);
+
+  const changeHandler = (e) => {
+    const input = e.target;
+
+    setUserData((prevState) => {
+      return {
+        ...prevState,
+        [input.name]: input.value,
+      };
+    });
+    console.log(userData);
+  };
+
   const submitHandler = (e) => {
     e.preventDefault();
+    console.log(userData);
   };
 
   return (
     <Card className={styles.input}>
       <form onSubmit={submitHandler}>
         <label htmlFor="username">Username</label>
-        <input type="text" name="username" />
+        <input
+          onChange={changeHandler}
+          type="text"
+          name="username"
+          value={userData.username}
+        />
         <label htmlFor="age">Age (Years)</label>
-        <input type="number" name="age" />
+        <input
+          type="number"
+          name="age"
+          onChange={changeHandler}
+          value={userData.age}
+        />
         <Button> Add User </Button>
       </form>
     </Card>
