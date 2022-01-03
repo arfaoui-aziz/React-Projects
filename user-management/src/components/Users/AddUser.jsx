@@ -55,27 +55,28 @@ const AddUser = ({ onAddUser }) => {
   };
 
   return (
-    <Card className={styles.input}>
-      <form onSubmit={submitHandler}>
-        <label htmlFor="username">Username</label>
-        <input
-          onChange={changeHandler}
-          type="text"
-          name="username"
-          value={userData.username}
-        />
-        <label htmlFor="age">Age (Years)</label>
-        <input
-          type="number"
-          name="age"
-          onChange={changeHandler}
-          value={userData.age}
-        />
-        <Button> Add User </Button>
-      </form>
-
+    <>
+      <Card className={styles.input}>
+        <form onSubmit={submitHandler}>
+          <label htmlFor="username">Username</label>
+          <input
+            onChange={changeHandler}
+            type="text"
+            name="username"
+            value={userData.username}
+          />
+          <label htmlFor="age">Age (Years)</label>
+          <input
+            type="number"
+            name="age"
+            onChange={changeHandler}
+            value={userData.age}
+          />
+          <Button> Add User </Button>
+        </form>
+      </Card>
       {error.isError && <ErrorModal error={error} onConfirm={closeModal} />}
-    </Card>
+    </>
   );
 };
 
