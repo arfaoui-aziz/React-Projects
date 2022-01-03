@@ -17,12 +17,19 @@ const AddUser = () => {
         [input.name]: input.value,
       };
     });
-    console.log(userData);
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(userData);
+    if (
+      userData.username.trim().length === 0 ||
+      userData.age.trim().length === 0 ||
+      +userData.age < 6
+    ) {
+      console.log("ERROOOOOR!!!!!");
+      return;
+    }
+    setUserData(initialUserData);
   };
 
   return (
