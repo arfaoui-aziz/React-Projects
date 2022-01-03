@@ -3,7 +3,7 @@ import React from "react";
 const UserCard = ({ user }) => {
   return (
     <li>
-      {user.name} ({user.age} years old)
+      {user.username} ({user.age} years old)
     </li>
   );
 };

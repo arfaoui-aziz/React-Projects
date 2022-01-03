@@ -4,7 +4,7 @@ import Button from "../UI/Button";
 import Card from "../UI/Card";
 import styles from "./AddUser.module.css";
 
-const AddUser = () => {
+const AddUser = ({ onAddUser }) => {
   const initialUserData = { username: "", age: "" };
   const [userData, setUserData] = useState(initialUserData);
 
@@ -29,6 +29,7 @@ const AddUser = () => {
       console.log("ERROOOOOR!!!!!");
       return;
     }
+    onAddUser(userData);
     setUserData(initialUserData);
   };
 
