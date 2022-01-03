@@ -1,4 +1,5 @@
 import styles from "./Card.module.css";
+
 const Card = ({ children, className }) => {
   const classes = `${styles.card} ${className}`;
 
