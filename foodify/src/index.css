@@ -1,17 +1,3 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 *,
 *::before,
 *::after {
@@ -24,12 +10,22 @@ code {
   margin: 0;
   --main-color: #ff5a00;
   --second-color: #fc2547;
-  --main-gradient: linear-gradient(
+  --main-gradient: linear-gradient(to right, #fc2547, #ff5a00);
+  --second-gradient: linear-gradient(
     to right,
     #fc2547 0%,
     #ff5a00 50%,
     #fc2547 100%
   );
+}
+
+html {
+  font-size: 10px;
+}
+@media (min-width: 786px) {
+  html {
+    font-size: 16px;
+  }
 }
 /*
   3. Allow percentage-based heights in the application
