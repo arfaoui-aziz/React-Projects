@@ -11,6 +11,9 @@ export default AuthContext;
 export const AuthContextProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  console.log(AuthContext);
+  console.log(AuthContextProvider);
+
   useEffect(() => {
     const storedUserLoggedInInformation = localStorage.getItem("isLoggedIn");
 
