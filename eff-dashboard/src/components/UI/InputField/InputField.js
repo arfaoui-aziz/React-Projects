@@ -5,7 +5,7 @@ import classes from "./InputField.module.css";
 const InputField = React.forwardRef(
   ({ onBlur, onChange, value, type, id, label, isValid }, ref) => {
     const inputRef = useRef();
-    useImperativeHandle(inputRef, () => {
+    useImperativeHandle(ref, () => {
       return { focus: activate };
     });
     const activate = () => {
